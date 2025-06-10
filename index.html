@@ -1,69 +1,86 @@
-<head><script defer src="main.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve '/home/mat/Documents/Odin-Project/Full   Stack JavaScript/Web-projects/Project_Weather-App/src/index.html' in '/home/ma  t/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Project_Weather-Ap  p'
-  ModuleNotFoundError: Module not found: Error: Can't resolve '/home/mat/Documen  ts/Odin-Project/Full Stack JavaScript/Web-projects/Project_Weather-App/src/ind  ex.html' in '/home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projec  ts/Project_Weather-App'
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/Compilation.js:2123:28
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:923:13
-      at eval (eval at create (/home/mat/Documents/Odin-Project/Full Stack JavaS  cript/Web-projects/Project_Weather-App/node_modules/tapable/lib/HookCodeFactor  y.js:33:10), <anonymous>:10:1)
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:339:22
-      at eval (eval at create (/home/mat/Documents/Odin-Project/Full Stack JavaS  cript/Web-projects/Project_Weather-App/node_modules/tapable/lib/HookCodeFactor  y.js:33:10), <anonymous>:9:1)
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:520:22
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:151:10
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:783:25
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:1008:8
-      at /home/mat/Documents/Odin-Project/Full Stack JavaScript/Web-projects/Pro  ject_Weather-App/node_modules/webpack/lib/NormalModuleFactory.js:1137:5
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather_App</title>
+    <link rel="icon" href="960765bcf6a5deb4035d.png">
+    <link rel="stylesheet" href="609a232ab53e413e38d2.css">
+    <!-- <script defer src="main.js"></script> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script defer src="main.js"></script></head>
   
-  - Compilation.js:2123 
-    [Project_Weather-App]/[webpack]/lib/Compilation.js:2123:28
-  
-  - NormalModuleFactory.js:923 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:923:13
-  
-  
-  - NormalModuleFactory.js:339 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:339:22
-  
-  
-  - NormalModuleFactory.js:520 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:520:22
-  
-  - NormalModuleFactory.js:151 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:151:10
-  
-  - NormalModuleFactory.js:783 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:783:25
-  
-  - NormalModuleFactory.js:1008 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:1008:8
-  
-  - NormalModuleFactory.js:1137 
-    [Project_Weather-App]/[webpack]/lib/NormalModuleFactory.js:1137:5
-  
-  - child-compiler.js:211 
-    [Project_Weather-App]/[html-webpack-plugin]/lib/child-compiler.js:211:18
-  
-  - Compiler.js:629 finalCallback
-    [Project_Weather-App]/[webpack]/lib/Compiler.js:629:5
-  
-  - Compiler.js:664 
-    [Project_Weather-App]/[webpack]/lib/Compiler.js:664:11
-  
-  - Compiler.js:1350 
-    [Project_Weather-App]/[webpack]/lib/Compiler.js:1350:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [Project_Weather-App]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1346 
-    [Project_Weather-App]/[webpack]/lib/Compiler.js:1346:33
-  
-  - Compilation.js:2938 finalCallback
-    [Project_Weather-App]/[webpack]/lib/Compilation.js:2938:11
-  
-  - Compilation.js:3251 
-    [Project_Weather-App]/[webpack]/lib/Compilation.js:3251:11
-  
-  
-</pre>
+  <body>
+    <header>
+      <div class="header-title">
+          <img src="c4d8bbac4d1756eb44f9.png" alt="weather icon" class="header-icon">
+          <h1>SkyCast</h1>
+      </div>
+      <div class="header-search">
+        <div class="search-box">
+          <img src="54ff7732bb1a5ff166c6.svg" alt="magnifier icon">
+          <form action="" class="search-form">
+            <input type="search"  name="title" class="search-input" placeholder="Search a City" autocomplete="address-level2"/>
+          </form>
+        </div>
+        <ul class="suggestions-list invisible"></ul>
+      </div>
+    </header>
+    <main class="main">
+      <div class="CW-dashboard">
+        <h1 class="CW-city"></h1>
+        <div class="CW">
+          <div class="CW-info">
+            <h1 class="CW-temperature"></h1>
+            <h3 class="CW-condition"></h3>
+            <div class="CW-highandlow">
+              <h3 class="CW-high"></h3>
+              <h3 class="CW-low"></h3>
+            </div>
+          </div>
+          <img src="#" alt="current weather icon" class="CW-img">  
+        </div>
+      </div>
+      <div class="CW-more">
+        <ul class="CW-details">
+          <li class="detail">
+            <div class="info">
+              <img src="568cf947153c27523baf.svg" alt="thermal sensation icon" class="CW-icon">
+              <h3>Thermal Sensation</h3>
+            </div>
+            <h3 class="CW-sensation"></h3>
+          </li>
+          <li class="detail">
+            <div class="info">
+              <img src="105e4d8334493ba05685.svg" alt="rain chance icon" class="CW-icon">
+              <h3>Chance of Precipitation</h3>
+            </div>
+            <h3 class="CW-precipitation"></h3>
+          </li>
+          <li class="detail">
+            <div class="info">
+              <img src="20a960be329db3c3deb4.svg" alt="air humidity icon" class="CW-icon">
+              <h3>Humidity</h3>
+            </div>
+            <h3 class="CW-humidity"></h3>
+          </li>
+          <li class="detail">
+            <div class="info">
+              <img src="9a5e68987c5e27b759b6.svg" alt="wind icon" class="CW-icon">
+              <h3>Wind</h3>
+            </div>
+            <h3 class="CW-wind"></h3>
+          </li>
+          <li class="detail">
+            <div class="info">
+              <img src="a3d8e77d0f79f95ade8c.svg" alt="uv index icon" class="CW-icon">
+              <h3>UV Index</h3>
+            </div>
+            <h3 class="CW-UV"></h3>
+          </li>
+        </ul>
+      </div>
+      <div class="ND-dashboard"></div>
+    </main>
+    <!-- <script src="/dist/main.js"></script> -->
+  </body>
+</html>
