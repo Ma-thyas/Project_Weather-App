@@ -12,7 +12,6 @@ function showResult() {
   debouncedShowCities();
 }
 
-// searchInput.addEventListener('keyup', searchBar);
 searchInput.addEventListener('input', showResult);
 suggestionList.addEventListener ('click', (e) => {
   chooseCity(e);

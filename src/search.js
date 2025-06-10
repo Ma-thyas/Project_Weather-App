@@ -1,15 +1,6 @@
-// import { createElement } from "react";
-
 const searchInput = document.querySelector('.search-input');
 const headerSearch = document.querySelector('.header-search');
 const suggestionList = document.querySelector('.suggestions-list');
-
-
-// const suggestionList = document.createElement('ul');
-// suggestionList.className = 'suggestions-list';
-// headerSearch.appendChild(suggestionList)
-
-// const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function showCities() {
     suggestionList.classList.replace('invisible', 'visible');
@@ -32,9 +23,6 @@ async function showCities() {
         console.log(data);
         const matches = data.data;
         console.log(matches);
-        // const matches = cities
-        // .filter(city => city.toLowerCase().startsWith(query))
-        // .slice(0, 5);
 
         matches.forEach(city => {
             const li = document.createElement('li');
@@ -43,18 +31,16 @@ async function showCities() {
             suggestionList.appendChild(li);
         });
 
-
     } catch (error) {
         console.error('Error while choosing the city', error);
     }
-}
+};
 
 
 const chooseCity = (e) => {
     searchInput.value = e.target.textContent;
     suggestionList.innerHTML = '';
     suggestionList.classList.replace('visible', 'invisible');
-
 }
 
 

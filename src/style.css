@@ -7,7 +7,6 @@
 
 :root {
   font-family: 'Lexen', cursive;
-  --background: #030125;
 }
 
 header {
@@ -47,7 +46,6 @@ header {
   height: 4vh;
   position: absolute;
   margin-left: 8px;
- 
 }
 
 .search-form input {
@@ -58,7 +56,6 @@ header {
   border-radius: 5px;
   font: inherit;
   letter-spacing: -1px;
-  
 }
 
 .suggestions-list {
@@ -80,7 +77,7 @@ header {
   visibility: hidden;
 }
 
-/* Visible */
+
 .suggestions-list.visible {
   opacity: 1;
   pointer-events: auto;
@@ -88,9 +85,7 @@ header {
 }
 
 .suggestions-list li {
-
   cursor: pointer;
-  
 }
 
 .suggestions-list li:hover {
@@ -101,8 +96,8 @@ header {
 main {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  margin-top: 3vh;
-  padding: 5vh;
+  margin-top: 1vh;
+  padding: 4vh;
   gap: 5vh;
 }
 
@@ -115,14 +110,12 @@ main {
   border-radius: 5px;
   background-color: #1485b7;
   box-shadow: 2px 2px 5px black;
-
 }
 
 
 .CW-city {
   font-size: 5vh;
   font-weight: 800;
-  
 }
 
 .CW {
@@ -144,7 +137,6 @@ main {
 
 .CW-img {
   height: 30vh;
-  
 }
 
 .CW-more {
@@ -166,7 +158,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .detail>h3 {
@@ -181,7 +172,6 @@ main {
 
 .CW-icon {
   height: 3vh;
-  
 }
 
 
@@ -191,7 +181,6 @@ main {
   flex-direction: row;
   justify-content: space-between;
   gap: 2vh;
-  
 }
 
 .day-content {
@@ -213,13 +202,13 @@ main {
 
 .ND-img {
   height: 20vh;
-  
 }
 
 .ND-condition {
   text-align: center;
   height: 5vh;
   margin: 0;
+  font-size: 2vh;
 }
 
 .ND-temp {
@@ -227,7 +216,6 @@ main {
   flex-direction: row;
   font-size: 2vh;
   margin-top: 1vh;
-  
 }
 
 .ND-temp h4 {
@@ -237,8 +225,7 @@ main {
 .ND-temp hr {
   border-top: 1px solid #0a0000;
   border-radius: 5px;
-  margin: 20px 8px;
+  margin: 3.5vh 1vh;
   background-color: whitesmoke;
   width: 5vh; 
-  
 }

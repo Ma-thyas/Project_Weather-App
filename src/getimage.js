@@ -1,4 +1,3 @@
-// const img = document.querySelector('.CW-img');
 
 const images = {};
 const context = require.context('./assets/weathers/', false, /\.(png|jpe?g|svg)$/);
@@ -8,15 +7,11 @@ context.keys().forEach((key) => {
   images[filename] = context(key);        // ex: images['sunny.png'] = '/img/weathers/sunny.png'
 });
 
-// export function getWeatherImage(weather) {
-//   const filename = `${weather}.svg`; // on suppose que les fichiers ont une extension .png
-//   return images[filename] || null;   // retourne l'image ou null si non trouvée
-// }
+
 const getWeatherImage = (weather) => {
-  const filename = `${weather}.svg`; // on suppose que les fichiers ont une extension .png
+  const filename = `${weather}.svg`;
   return images[filename] || null;   // retourne l'image ou null si non trouvée
 }
-
 
 export function chooseIcon (img, weather, cloudLevel, rainLevel) {
    if(weather == "partly-cloudy-day") {
